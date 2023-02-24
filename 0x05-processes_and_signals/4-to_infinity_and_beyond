@@ -2,10 +2,8 @@
 #Bash script that displays To infinity and beyond indefinitely
 
 
-count=0
-until false
+while true
 do
 	echo "To infinity and beyond"
-	((count++))
 	sleep 2
 done
