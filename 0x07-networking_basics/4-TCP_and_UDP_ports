@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# use netstat to display all listening TCP and UDP sockets
+netstat -tulpn | grep "LISTEN" | awk '{print $4, $7}' | while read line; do
+    # extract the port number and protocol
+    port=$(echo $line | awk '{split($1,a,":"); print a[length(a)]}')
+    protocol=$(echo $line | awk '{split($1,a,":"); print a[length(a)-1]}')
+
+    # extract the PID and program name
+    pid=$(echo $line | awk '{split($2,a,"/"); print a[1]}')
+    program=$(echo $line | awk '{split($2,a,"/"); print a[length(a)]}')
+
+    # display the results
+    echo "$program (PID: $pid) is listening on port $port ($protocol)"
+done
+
