@@ -48,6 +48,6 @@ frontend  emarex.tech-https-frontend
 
 backend emarex.tech-backend
         balance roundrobin
-        server 914-web-01 3.80.19.99:80 check
-        server 914-web-02 3.94.211.233:80 check
+        server 181242-web-01 3.80.19.99:80 check
+        server 181242-web-02 3.94.211.233:80 check
 # end of parameters
