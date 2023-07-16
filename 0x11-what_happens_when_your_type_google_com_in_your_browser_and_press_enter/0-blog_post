@@ -1,0 +1,19 @@
+Introduction:
+When you type "https://www.google.com" into your browser and press Enter, what happens behind the scenes? It's an interesting journey with many important parts that all come together perfectly. We will examine the following procedure step-by-step in this article, starting with the initial DNS request and ending with the final communication with Google's servers.
+1.	DNS request
+2.	TCP/IP
+3.	Firewall
+4.	HTTPS/SSL
+5.	Load-balancer
+6.	Web server
+7.	Application server
+8.	Database
+DNS request: The journey starts with a Domain Name System (DNS) request. Your browser requests the IP address associated with "www.google.com" from a DNS resolver, such as the DNS server of your Internet service provider (ISP). The resolver then looks in its cache, and if the IP address is not there, it sends the request to other DNS servers until it finds the IP address associated with the domain name.
+TCP/IP: Once the IP address is received, your internet browser initiates a Transmission Control Protocol (TCP) connection with the destination Google server. TCP ensures reliable data transmission by breaking it into packets and ensuring they arrive in the correct order. These packets are addressed and routed across the network using the Internet Protocol (IP).
+Firewall: During connection initiation between TCP and the Google server, the request sent from your browser or your computer passes through various network devices, including firewalls. The firewall analyzes the packets in real time, inspecting their headers and content to determine if they meet the allowed criteria set by the network administrator or security policies.
+HTTPS/SSL: Next, your browser establishes a secure HTTPS connection with the   Google server. HTTPS stands for Hypertext Transfer Protocol Secure, and it utilizes encryption protocols such as SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security) to establish connections between your browser and the server, protecting the data exchanged during the session. The encryption provided by HTTPS prevents unauthorized parties from intercepting and understanding the data being transmitted between your browser and the Google server. It safeguards sensitive information, such as login credentials, personal details, or financial data, from potential threats.
+Load-balancer: Popular websites like Google employ load balancers to handle massive amounts of traffic. Load balancers act as a central point of entry for incoming requests. They distribute the requests your computer or browser sent to the Google server across multiple servers in a balanced manner, ensuring that no single server becomes overwhelmed. The load balancer intelligently determines how to distribute requests based on various algorithms, such as round-robin, the health of the server, least connections, or weighted distribution.
+Web server: Once your request reaches the appropriate server, a web server takes over and processes the request. Web servers such as Apache or Nginx are responsible for fetching the requested web page or resource and packaging it into an HTTP response to be sent back to the client's browser.
+Application server: In more complex web applications, an application server often plays a crucial role in executing server-side codes, handling business logic, interacting with databases and generating dynamic content before sending the response back to the web server. It acts as an intermediary layer between the web server and the backend systems.
+Database: In many web applications, data storage, and retrieval are essential, and that's where databases come into play. Databases store structured data and provide mechanisms for managing, organizing, and retrieving that data efficiently. When a web page or application requires data from a database, the application server interacts with the database management system (DBMS) to retrieve the necessary information.
+
