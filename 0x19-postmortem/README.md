@@ -1,4 +1,5 @@
 0x19-postmortem
+
 As part of my software engineering studies with ALX Africa, I recently undertook a debugging assignment to investigate and resolve an issue with a WordPress website. In this postmortem, I will provide a comprehensive overview of the incident, including the timeline, root cause analysis, actions taken, and preventive measures implemented.
 
 Issue Summary:
